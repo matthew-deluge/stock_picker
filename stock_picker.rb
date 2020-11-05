@@ -6,9 +6,6 @@ def stock_picker(prices)
     sell_day = 0
     prices.each_with_index do |price, index|
         for i in 1..(prices.length-1)-index
-           #puts i
-            #puts price
-            #puts index
             if prices[index+i]-price > high_profit
                 high_profit = prices[index+i] - price
                 buy_day = index
